@@ -36,19 +36,19 @@ I have solve the challenge using Laravel PHP framework,Jquery,HTML 5, Boostrap a
 I have created directory name RawQueries under Models directory then created model class using PDO for each tables.
 
 - Invoices.
-- InvoicesItem.
+- InvoicesItems.
 - Customers
 
 ## How to install this app
 
-- Clone for Git Repo
+- Clone
 - Use .env.sample for your .env
-- Setup your database connection
+- Setup your database connection in .env
 - Run Migration  php artisan migrate
 - Run Db Seeder  php artisan db:seed --class=CustomerTableSeeder
-- Run php artisan serve to start the app
+- Run php artisan serve
 - Navigate to http://127.0.0.1:8000/ on your browser
-- Congrat! you now creating an Invoice
+- Congrats! You now creating an Invoice
  
 ## License
 
