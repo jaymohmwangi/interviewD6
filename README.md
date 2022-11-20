@@ -44,9 +44,12 @@ I have created directory name RawQueries under Models directory then created mod
 - Clone for Git Repo
 - Use .env.sample for your .env
 - Setup your database connection
-- Run Migration ->php artisan migrate
-- Run Db Seeder ->  php artisan db:seed --class=CustomerTableSeeder
-
+- Run Migration  php artisan migrate
+- Run Db Seeder  php artisan db:seed --class=CustomerTableSeeder
+- Run php artisan serve to start the app
+- Navigate to http://127.0.0.1:8000/ on your browser
+- Congrat! you now creating an Invoice
+ 
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
