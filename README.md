@@ -39,6 +39,13 @@ I have created directory name RawQueries under Models directory then created mod
 - InvoicesItem.
 - Customers
 
+## How to install this app
+
+-Clone for Git Repo
+-Use .env.sample for your .env
+-Setup your database connection
+-Run Migration ->php artisan migrate
+-Run Db Seeder ->  php artisan db:seed --class=CustomerTableSeeder
 
 ## License
 
