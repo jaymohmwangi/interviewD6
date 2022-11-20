@@ -7,6 +7,7 @@
                 <!-- Card -->
                 <div class="card card-lg mb-5">
                     <form id="add-invoice-form" action="{{route("store.invoice")}}" method="post">
+                        @csrf
                     <div class="card-body">
                         <div class="row justify-content-lg-between">
                             <div class="col-sm-5 order-2 order-sm-1 mb-3">
