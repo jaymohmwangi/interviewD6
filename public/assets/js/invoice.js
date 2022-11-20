@@ -50,9 +50,9 @@ $(document).ready(function(){
         var totalAftertax = $('#totalAftertax').val();
         if(amountPaid && totalAftertax) {
             totalAftertax = totalAftertax-amountPaid;
-            $('#amountDue').val(totalAftertax);
+            $('#amountDue').val(totalAftertax.toFixed(2));
         } else {
-            $('#amountDue').val(totalAftertax);
+            $('#amountDue').val(totalAftertax.toFixed(2));
         }
     });
     $(document).on('click', '.deleteInvoice', function(){
