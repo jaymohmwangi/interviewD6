@@ -32,9 +32,6 @@ class InvoicesController extends Controller
                 "total_after_tax"=>'required|numeric|min:1',
                 "amount_paid"=>'nullable|numeric',
                 "amount_due"=>'required|numeric',
-            ],
-            [
-                "customer_id.*" => "A valid customer id is required! "
             ]);
 
         if ($validator->fails()) {
@@ -71,13 +68,14 @@ class InvoicesController extends Controller
         $id=(new Invoice())->insert($data_invoice);
         //create invoice items
         for ($i = 0; $i < count($request->description); $i++){
+            $data_invoice_item= array();
             $data_invoice_item["invoice_id"]=$id;
             $data_invoice_item["item_description"]=$request->description[$i];
             $data_invoice_item["item_amount"]=(float)$request->amount[$i];
             $data_invoice_item["item_is_taxable"]=(isset($request->taxed[$i]))?1:0;
             $data_invoice_item["created_at"]=date("Y-m-d H:i:s");
             //save invoice item
-            $id=(new InvoiceItems())->insert($data_invoice_item);
+            (new InvoiceItems())->insert($data_invoice_item);
         }
 
         return response()->json([
