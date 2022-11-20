@@ -49,7 +49,11 @@ I have created directory name RawQueries under Models directory then created mod
 - Run php artisan serve
 - Navigate to http://127.0.0.1:8000/ on your browser
 - Congrats! You now creating an Invoice
- 
+
+## Running test 
+To test if the app is running successfully
+run php artisan test
+
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
