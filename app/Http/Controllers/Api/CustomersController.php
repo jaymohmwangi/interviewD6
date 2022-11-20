@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\Validator;
 class CustomersController extends Controller
 {
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\JsonResponse
-     */
+
     public function find(Request $request)
     {
         //validate route parameter-id

@@ -4,42 +4,19 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 
+use App\Http\Requests\CreateInvoiceRequest;
 use App\Models\RawQueries\Customer;
 use App\Models\RawQueries\Invoice;
 use App\Models\RawQueries\InvoiceItems;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 
 class InvoicesController extends Controller
 {
 
-
-    public function store(Request $request)
+    public function store(CreateInvoiceRequest $request)
     {
-        $validator = Validator::make($request->all(),
-            [
-                "customer_id" => 'required|numeric|min:1',
-                "invoice_date" => 'required|date|date_format:Y-m-d',
-                "due_date" => 'required|date|date_format:Y-m-d|after_or_equal:invoice_date',
-                "currency" => 'required|string',
-                "description"=>'required|array|min:1',
-                "amount"=>'required|array|min:1',
-                "taxed"=>'nullable|array',
-                "sub_total"=>'required|numeric|min:1',
-                "taxable_total"=>'required|numeric',
-                "tax_rate"=>'nullable|numeric',
-                "tax_amount"=>'nullable|numeric',
-                "total_after_tax"=>'required|numeric|min:1',
-                "amount_paid"=>'nullable|numeric',
-                "amount_due"=>'required|numeric',
-            ]);
-
-        if ($validator->fails()) {
-            return response()->json([
-                "success" => false,
-                "errors" => ["validation" => [$validator->errors()->first()]],
-            ], 422);
-        }
         //check if customer id is valid
         $customer = (new Customer())->find("*", "id=$request->customer_id");
         if (empty($customer)) {
@@ -77,12 +54,12 @@ class InvoicesController extends Controller
             //save invoice item
             (new InvoiceItems())->insert($data_invoice_item);
         }
+        Log::info(json_encode($request->all()));
 
         return response()->json([
             "success" => true,
             "message" => "Success",
-            "item" => $data_invoice_item
-        ], 200);
+        ], 201);
     }
 
 
