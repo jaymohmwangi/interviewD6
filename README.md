@@ -9,7 +9,7 @@
 
 ## Invoicing Interview Challenge
 
-We’d like you to build a UI and API that allow a user to capture invoices as shown in the image below, and store it in a database. You can assume that your solution is part of a bigger system, so you do not need to implement authentication or additional list/view screens. Keep in mind how invoices would be handled in a real system - some elements would be pre-configured or selectable, rather than being captured from scratch.
+Build a UI and API that allow a user to capture invoices as shown in the image below, and store it in a database. You can assume that your solution is part of a bigger system, so you do not need to implement authentication or additional list/view screens. Keep in mind how invoices would be handled in a real system - some elements would be pre-configured or selectable, rather than being captured from scratch.
 You can use any framework and database you like, and you can pre-populate the database however you wish. We will review and test your solution as we would production code, meaning input validation/error handling is important. 
 
 Our only requirements are:
