@@ -9,13 +9,11 @@
 
 ## Invoicing Interview Challenge
 
-Build a UI and API that allow a user to capture invoices as shown in the image below, and store it in a database. You can assume that your solution is part of a bigger system, so you do not need to implement authentication or additional list/view screens. Keep in mind how invoices would be handled in a real system - some elements would be pre-configured or selectable, rather than being captured from scratch.
-You can use any framework and database you like, and you can pre-populate the database however you wish. We will review and test your solution as we would production code, meaning input validation/error handling is important. 
+Build a UI and API that allow a user to capture invoices as shown in the image below, and store it in a database. 
+Requirements are:
 
-Our only requirements are:
-
-- That you use plain SQL queries, and not an ORM. .
-- That your solution be web based
+- Used plain SQL queries, and not an ORM. .
+- Web based solution
 
 <p align="center"><a href="https://cdn.vertex42.com/ExcelTemplates/Images/excel-invoice-template.png" target="_blank"><img src="https://cdn.vertex42.com/ExcelTemplates/Images/excel-invoice-template.png" width="400"></a></p>
 
