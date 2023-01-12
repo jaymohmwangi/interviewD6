@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Invoicing Interview Challenge
+## Invoicing Challenge
 
 Build a UI and API that allow a user to capture invoices as shown in the image below, and store it in a database. 
 Requirements are:
